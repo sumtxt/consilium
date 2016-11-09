@@ -21,6 +21,8 @@
 #' @examples 
 #'  \dontrun{
 #'
+#' 	require(plyr)
+#' 
 #'  set.seed(10)
 #'  J <- 250 	# proposal 
 #'  I <- 10 	# actors
@@ -52,8 +54,6 @@
 #' @export
 RankTest <- function(formula,data, prpslid, gntid, getAggData=FALSE, ...){
 
-	require("Matrix")
-	
 	# Data sanity check 
 	if (  is.numeric(data[,gntid]) != TRUE | is.numeric(data[,prpslid]) != TRUE ) stop("Supply prpslid and gntid as numeric.") 
 	data$m <- unclass(as.factor(data[,gntid]))

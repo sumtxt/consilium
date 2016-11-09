@@ -50,6 +50,8 @@
 #'  # Example 1: Using Simulated Data # 
 #'  ###########################
 #'
+#' 	require(plyr)
+#' 
 #'  set.seed(10)
 #'  J <- 250 	# proposal 
 #'  I <- 10 	# actors
@@ -132,7 +134,6 @@ BayesSimPMP <- function(posterior, data, prpslid, gntid, R, V=NULL, qweights = N
 
 		if ( is.null(V) ) V=0L
 
-		require(poibin)
 		getPP <- function(data, betadraw,R,V,I) {
 			pp <- pnorm(as.matrix(data) %*% betadraw)
 			return( poibinprob(pp,R,V,I) )

@@ -87,6 +87,8 @@
 #'  # Example 1: q-rule # 
 #'  ###########################
 #'
+#' 	require(plyr)
+#' 
 #'  set.seed(10)
 #'  J <- 250 	# proposal 
 #'  I <- 10 	# members
@@ -122,8 +124,9 @@
 #'
 #'  # Example 2: Weighted q-rule 
 #'  #############################
-#'
-#'  rm(list=ls())
+#'	
+#'  require(plyr)
+#'  
 #'  set.seed(10)
 #'  J <- 250 	# proposal 
 #'  I <- 10 	# members

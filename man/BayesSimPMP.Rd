@@ -71,6 +71,8 @@ The function can not (yet) obtain posterior predicted probabilities if the poste
  # Example 1: Using Simulated Data # 
  ###########################
 
+	require(plyr)
+
  set.seed(10)
  J <- 250 	# proposal 
  I <- 10 	# actors

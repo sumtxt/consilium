@@ -140,7 +140,7 @@ case set \code{whichloglik} to \code{"comb"}.
  summary(m1)
 
  # Plot log-likelihood function
- library(lattice)
+ require(lattice)
 
  beta0 <- beta1 <- seq(-2,2,length=30)
  beta <- expand.grid(beta0,beta1)

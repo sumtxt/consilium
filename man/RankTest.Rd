@@ -32,6 +32,8 @@ This function is useful to evaluate a necessary condition for parameteric identi
 \examples{
  \dontrun{
 
+	require(plyr)
+
  set.seed(10)
  J <- 250 	# proposal 
  I <- 10 	# actors

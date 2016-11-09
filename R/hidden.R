@@ -40,7 +40,6 @@ setMethod("logLik", "maxlikpmp", function(object) object@loglik )
 
 #' @export
 setMethod("summary", "maxlikpmp", function(object) { 
-	require(texreg)
 	lik <- logLik(object)
 	n <- object@n
 	k <- length(coef(object))
@@ -139,9 +138,9 @@ blinklikpmp <- function(beta,y,X,I,R,V){
 
 
 # Voting rules
-# vetomajority_rule <- function(x,R,V,I) {
-#     if (V == 0) return( (rowSums(x) >= R) )
-#     if (V == 1) return( ( x[,1] == TRUE) & (rowSums(x[,2:I]) >= R) )
-#     if (V > 1 & V < I) return( ( rowSums(x[,1:V]) == V ) & (rowSums(x[,(V+1):I]) >= R))
-#     if ( V == I) return( ( rowSums(x) == V ) )
-#     }
+vetomajority_rule <- function(x,R,V,I) {
+    if (V == 0) return( (rowSums(x) >= R) )
+    if (V == 1) return( ( x[,1] == TRUE) & (rowSums(x[,2:I]) >= R) )
+    if (V > 1 & V < I) return( ( rowSums(x[,1:V]) == V ) & (rowSums(x[,(V+1):I]) >= R))
+    if ( V == I) return( ( rowSums(x) == V ) )
+    }

@@ -25,5 +25,20 @@
 #'	Marbach, Moritz. 2016. `Analyzing Decision Records from Committees.'' Working Paper.
 #'
 #' 
+#' @import Rcpp 
+#' @import RcppArmadillo
+#' @import coda
+#' @import Formula
+#' @import poibin
+#' @importFrom Matrix rankMatrix
+#' @importFrom plyr ddply dlply
+#' @importFrom texreg createTexreg screenreg
+#' @importFrom combinat combn
+#' @importFrom mnormt dmnorm
+#' @importFrom utils methods
+#' @importFrom methods new
+#' @importFrom stats model.frame model.matrix optim pbinom pnorm rnorm runif terms update
+#' 
 #' @useDynLib consilium 
 NULL
+
