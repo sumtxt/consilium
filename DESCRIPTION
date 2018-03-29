@@ -17,7 +17,7 @@ Imports:
     mnormt (>= 1.5-1),
     Matrix (>= 1.2-6),
     texreg (>= 1.36.7), 
-    utils (>= 3.3.1), 
+    utils (>= 3.1.2), 
     methods 
 Suggests:
     knitr,
